@@ -3,6 +3,7 @@ package dad;
 
 //import UpperEssential.UpperEssentialLookAndFeel;
 import java.awt.Color;
+import java.awt.Cursor;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -100,7 +101,7 @@ public class DadReframe extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 280, 240));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 340, 260));
 
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 230, 220));
@@ -110,6 +111,12 @@ public class DadReframe extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
+        if(evt.getSource()==jToggleButton1){
+            RealizarPedido realizarpedido=new RealizarPedido();
+            realizarpedido.show();
+            this.setEnabled(false);
+        }
+
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -138,13 +145,8 @@ public class DadReframe extends javax.swing.JFrame {
         //UIManager.setLookAndFeel(new UpperEssentialLookAndFeel());
         //</editor-fold>
         //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DadReframe().setVisible(true);
-            }
-        });
+        new DadReframe().setVisible(true);
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
