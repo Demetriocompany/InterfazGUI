@@ -136,6 +136,8 @@ public class RealizarPedido extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         if(evt.getSource()==jButton2){
+            DadReframe.jButton1.setEnabled(true);
+            
             this.setVisible(false);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -146,7 +148,7 @@ public class RealizarPedido extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private static javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;

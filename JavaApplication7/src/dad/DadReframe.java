@@ -1,13 +1,13 @@
 
 package dad;
-
+/**/
 //import UpperEssential.UpperEssentialLookAndFeel;
 import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class DadReframe extends javax.swing.JFrame {
+class DadReframe extends javax.swing.JFrame {
 
     public DadReframe() {
         initComponents();
@@ -25,10 +25,10 @@ public class DadReframe extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
-        jToggleButton1 = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -85,15 +85,6 @@ public class DadReframe extends javax.swing.JFrame {
         jSeparator5.setOpaque(true);
         getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 670, -1));
 
-        jToggleButton1.setText("Realizar Pedido");
-        jToggleButton1.setToolTipText("");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 210, -1));
-
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Lista de Pedidos", "Item 1", "Item 2", "Item 3", "Item 4" };
             public int getSize() { return strings.length; }
@@ -106,19 +97,16 @@ public class DadReframe extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 230, 220));
 
+        jButton1.setText("Realizar Pedido");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 190, 30));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-        if(evt.getSource()==jToggleButton1){
-            RealizarPedido realizarpedido=new RealizarPedido();
-            realizarpedido.show();
-            this.setEnabled(false);
-        }
-        this.setEnabled(true);
-
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
@@ -132,8 +120,18 @@ public class DadReframe extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void none(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_none
-
+        
+        
     }//GEN-LAST:event_none
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if(evt.getSource()==jButton1){
+            RealizarPedido realizarpedido=new RealizarPedido();
+            realizarpedido.setVisible(true);
+            jButton1.setEnabled(false);
+        }   
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,6 +150,7 @@ public class DadReframe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -163,6 +162,5 @@ public class DadReframe extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
