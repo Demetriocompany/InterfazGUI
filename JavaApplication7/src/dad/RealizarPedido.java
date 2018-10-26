@@ -136,8 +136,6 @@ public class RealizarPedido extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         if(evt.getSource()==jButton2){
-            DadReframe dadreframe=new DadReframe();
-            dadreframe.setEnabled(true);
             this.setVisible(false);
         }
     }//GEN-LAST:event_jButton2ActionPerformed

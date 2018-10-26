@@ -116,6 +116,7 @@ public class DadReframe extends javax.swing.JFrame {
             realizarpedido.show();
             this.setEnabled(false);
         }
+        this.setEnabled(true);
 
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
@@ -127,6 +128,7 @@ public class DadReframe extends javax.swing.JFrame {
             this.setEnabled(false);
         }
         jLabel2.setForeground(Color.red);
+        
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void none(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_none
